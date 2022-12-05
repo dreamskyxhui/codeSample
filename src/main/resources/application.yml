@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    authing:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://xx.xx.xx.xx:3306/authing_manager?useSSL=false&useUnicode=true&characterEncoding=utf-8
+      username: xxx
+      password: xxx
+
+    hikari:
+      minimumIdle: 10
+      maximumPoolSize: 300
+      idleTimeout: 60000
+      connectionTimeout: 300000
+      leakDetectionThreshold: 300000
+  jpa:
+    open-in-view: false
+    show-sql: false
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+token:
+  # token过期时间（小时）
+  timeOut: 2
+
+server:
+  port: 9011
+  servlet:
+    context-path: /codeSample

@@ -1,0 +1,69 @@
+<config>
+    <input basedir="target">
+        <jar in="code_sample-1.0.0-SNAPSHOT.jar" out="code_sample-1.0.0-SNAPSHOT.jar"/>
+    </input>
+
+    <classpath basedir="target">
+        <!-- Adding all jars in the lib directory to the classpath -->
+        <jar name="./lib/*.jar"/>
+    </classpath>
+
+
+    <ignore-classes>
+        <!--不混淆 引入的第三方jar包-->
+        <!--<class template="class *org*" />-->
+        <!--不混淆的类-->
+        <class template="class com.com.share.codesample.entity.*"/>
+        <class template="class com.com.share.codesample.repository.*"/>
+    </ignore-classes>
+
+    <keep-names>
+        <class template="class com.tencent.*"/>
+        <class access="protected+">
+            <field access="protected+"/>
+            <method access="protected+"/>
+        </class>
+    </keep-names>
+
+    <!-- Configuration properties, all properties are optional -->
+    <!-- General properties, we recommend to use these two properties -->
+    <property name="log-file" value="target/allatori-log.xml"/>
+    <property name="random-seed" value="type anything here"/>
+
+    <!-- String encryption -->
+    <property name="string-encryption" value="enable"/>
+    <property name="string-encryption-type" value="fast"/>
+    <property name="string-encryption-version" value="v4"/>
+    <!--    <property name="string-encryption-ignored-strings" value="patterns.txt"/>-->
+
+    <!-- Control flow obfuscation -->
+    <property name="control-flow-obfuscation" value="enable"/>
+    <property name="extensive-flow-obfuscation" value="normal"/>
+
+    <!-- Renaming -->
+    <!--    <property name="default-package" value="com.package"/>-->
+    <!--    <property name="force-default-package" value="enable"/>-->
+
+    <property name="packages-naming" value="keep"/>
+    <!--    <property name="classes-naming" value="compact"/>-->
+    <property name="methods-naming" value="compact"/>
+    <property name="fields-naming" value="compact"/>
+    <property name="local-variables-naming" value="optimize"/>
+
+    <property name="update-resource-names" value="disable"/>
+    <property name="update-resource-contents" value="disable"/>
+
+    <!-- Other -->
+    <property name="line-numbers" value="obfuscate"/>
+    <!--    <property name="generics" value="remove"/>-->
+    <!--    <property name="inner-classes" value="remove"/>-->
+    <!--    <property name="member-reorder" value="enable"/>-->
+    <!--    <property name="finalize" value="disable"/>-->
+    <!--    <property name="version-marker" value="anyValidIdentifierName"/>-->
+    <!--    <property name="synthetize-methods" value="all"/>-->
+    <!--    <property name="synthetize-fields" value="all"/>-->
+    <!--    <property name="remove-toString" value="enable"/>-->
+    <!--    <property name="remove-calls" value="com.package.Logger.debug"/>-->
+    <!--    <property name="output-jar-compression-level" value="9"/>-->
+
+</config>

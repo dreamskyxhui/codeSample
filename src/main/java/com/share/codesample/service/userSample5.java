@@ -11,7 +11,7 @@ public class userSample5 {
      * @param str 待规范化的姓名
      * @return 格式化后的姓名
      */
-    public static String nameNormalization(String str) {
+    public static String normalizeName(String str) {
         return str.replace("~", "").trim().substring(0,MAX_NAME_LEN);
     }
 
@@ -20,7 +20,7 @@ public class userSample5 {
      * @param str 待规范化的地址
      * @return 格式化后的地址
      */
-    public static String addressNormalization(String str) {
+    public static String normalizeAddress(String str) {
         return str.replace("~", "").trim();
     }
 
@@ -29,7 +29,7 @@ public class userSample5 {
      * @param age 待规范化的年龄
      * @return 已经规范化的年龄
      */
-    public static Integer ageNormalization(Integer age) {
+    public static Integer normalizeAge(Integer age) {
         if (age < MIN_AGE) {
             return DEFAULT_AGE;
         }
@@ -46,9 +46,9 @@ public class userSample5 {
         String address = "~ guangdong shenzhen ";
         Integer age = 999;
 
-        name = nameNormalization(name);
-        address = addressNormalization(address);
-        age = ageNormalization(age);
+        name = normalizeName(name);
+        address = normalizeAddress(address);
+        age = normalizeAge(age);
 
         System.out.println("name:" + name + ",address:" + address + ",age=" + age);
     }

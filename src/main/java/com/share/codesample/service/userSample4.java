@@ -7,7 +7,7 @@ public class userSample4 {
      * @param str 待规范化的字符串
      * @return 格式化后的字符串
      */
-    public static String stringNormalization(String str) {
+    public static String normalizeString(String str) {
         return str.replace("~", "").trim();
     }
 
@@ -16,7 +16,7 @@ public class userSample4 {
      * @param age 待规范化的年龄
      * @return 已经规范化的年龄
      */
-    public static Integer ageNormalization(Integer age) {
+    public static Integer normalizeAge(Integer age) {
         if (age < 0) {
             return -1;
         }
@@ -33,9 +33,9 @@ public class userSample4 {
         String address = "~ guangdong shenzhen ";
         Integer age = 999;
 
-        name = stringNormalization(name);
-        address = stringNormalization(address);
-        age = ageNormalization(age);
+        name = normalizeString(name);
+        address = normalizeString(address);
+        age = normalizeAge(age);
 
         System.out.println("name:" + name + ",address:" + address + ",age=" + age);
     }

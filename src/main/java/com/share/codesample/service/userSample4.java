@@ -18,11 +18,11 @@ public class userSample4 {
      */
     public static Integer ageNormalization(Integer age) {
         if (age < 0) {
-            return 0;
+            return -1;
         }
 
         if (age > 130) {
-            return 0;
+            return -1;
         }
 
         return age;

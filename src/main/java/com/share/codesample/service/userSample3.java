@@ -10,7 +10,7 @@ public class userSample3 {
         name = name.replace("~", "").trim();
         address = address.replace("~", "").trim();
         if (age > 130) {
-            age = 0;
+            age = -1;
         }
 
         System.out.println("name:" + name + ",address:" + address + ",age=" + age);

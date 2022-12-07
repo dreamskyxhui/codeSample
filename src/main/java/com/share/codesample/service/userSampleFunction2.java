@@ -2,9 +2,11 @@ package com.share.codesample.service;
 
 public class userSampleFunction2 {
     private static Integer MAX_NAME_LEN = 3; //姓名最大长度
+
     private static Integer MIN_AGE = 0; //最小年龄
     private static Integer MAX_AGE = 130; //最大年龄
     private static Integer UNKNOWN_AGE = -1; //未知年龄
+
     private static Integer MAN_SEX_CODE = 1; //男性
     private static Integer FEMALE_SEX_CODE = 2; //女性
     private static Integer UNKNOWN_SEX_CODE = -1; //未知性别

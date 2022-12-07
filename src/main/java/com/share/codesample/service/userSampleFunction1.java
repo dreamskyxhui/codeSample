@@ -61,6 +61,7 @@ public class userSampleFunction1 {
 
         Boolean isSameUser = false;
 
+        //判断是否是同一个人
         if (aUserIdNo.equals(bUserIdNo) || aUserMobile.equals(bUserMobile)) {
             if (!isDiffString(aUserName, bUserName)
                     && !isDiffInteger(aUserSex, bUserSex)

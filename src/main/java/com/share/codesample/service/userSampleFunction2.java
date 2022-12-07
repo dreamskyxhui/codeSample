@@ -138,20 +138,21 @@ public class userSampleFunction2 {
     }
 
     public static void main(String[] args) {
-        String aUserName = "tom";
+        String aUserName = "tom  ";
         Integer aUserSex = 1;
         Integer aUserAge = 18;
         String aUserMobile = "13522113573";
         String aUserIdNo = "621135xxx";
 
-        String bUserName = "tom";
-        Integer bUserSex = null;
-        Integer bUserAge = null;
+        String bUserName = "tom~ ";
+        Integer bUserSex = -1;
+        Integer bUserAge = 999;
         String bUserMobile = "13522113573";
         String bUserIdNo = "";
 
         Boolean isSameUser = false;
 
+        //判断是否是同一个人
         if (aUserIdNo.equals(bUserIdNo) || aUserMobile.equals(bUserMobile)) {
             if (!isDiffName(aUserName, bUserName)
                     && !isDiffSex(aUserSex, bUserSex)

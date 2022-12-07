@@ -2,7 +2,7 @@ package com.share.codesample.service;
 
 import com.sun.org.apache.xpath.internal.operations.Bool;
 
-public class userSample3 {
+public class userSampleChange2 {
 
     public static void main(String[] args) {
         String aUserName = "tom";

@@ -3,17 +3,26 @@ package com.share.codesample.service;
 public class userSample2 {
 
     public static void main(String[] args) {
-        String name = " tom ";
-        String address = "~guangdong shenzhen";
-        Integer age = -99;
+        String aUserName = "tom";
+        Integer aUserSex = 1;
+        Integer aUserAge = 18;
+        String aUserMobile = "13522113573";
+        String aUserIdNo = "621135xxx";
 
-        name = name.trim();
-        address = address.replace("~", "");
-        if (age < 0) {
-            age = -1;
+        String bUserName = "jack";
+        Integer bUserSex = 2;
+        Integer bUserAge = 6;
+        String bUserMobile = "13522113573";
+        String bUserIdNo = "";
+
+        Boolean isSameUser = false;
+        if(aUserIdNo.equals(bUserIdNo) || aUserMobile.equals(bUserMobile)) {
+            if (aUserName.equals(bUserName) && aUserSex.equals(bUserSex) && aUserAge.equals(bUserAge)) {
+                isSameUser = true;
+            }
         }
 
-        System.out.println("name:" + name + ",address:" + address + ",age=" + age);
+        System.out.println("A用户和B用户是同一个人:" + isSameUser);
     }
 
 }

@@ -1,6 +1,6 @@
 package com.share.codesample.service.classSample;
 
-public class UserSampleMain1 {
+public class Main1 {
     private static Integer MAX_NAME_LEN = 3; //姓名最大长度
 
     private static Integer MIN_AGE = 0; //最小年龄

@@ -1,6 +1,6 @@
 package com.share.codesample.service.functionSample;
 
-public class userSample {
+public class UserSampleChange1 {
 
     public static void main(String[] args) {
         String aUserName = "tom";
@@ -17,12 +17,12 @@ public class userSample {
 
         Boolean isSameUser = false;
         if(aUserIdNo.equals(bUserIdNo) || aUserMobile.equals(bUserMobile)) {
-            isSameUser = true;
+            if (aUserName.equals(bUserName) && aUserSex.equals(bUserSex) && aUserAge.equals(bUserAge)) {
+                isSameUser = true;
+            }
         }
 
         System.out.println("A用户和B用户是同一个人:" + isSameUser);
     }
+
 }
-
-
-

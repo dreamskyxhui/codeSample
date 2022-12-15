@@ -1,6 +1,6 @@
 package com.share.codesample.service.functionSample;
 
-public class userSampleFunction1 {
+public class UserSampleFunction1 {
 
     /**
      * 比较两个有内容的字符串是否不一致；任意一个为空或null时不比较

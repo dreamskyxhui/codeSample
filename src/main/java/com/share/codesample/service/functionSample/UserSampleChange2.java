@@ -1,6 +1,6 @@
 package com.share.codesample.service.functionSample;
 
-public class userSampleChange2 {
+public class UserSampleChange2 {
 
     public static void main(String[] args) {
         String aUserName = "tom";

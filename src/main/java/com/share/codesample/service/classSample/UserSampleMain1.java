@@ -1,6 +1,6 @@
-package com.share.codesample.service.functionSample;
+package com.share.codesample.service.classSample;
 
-public class userSampleFunction2 {
+public class UserSampleMain1 {
     private static Integer MAX_NAME_LEN = 3; //姓名最大长度
 
     private static Integer MIN_AGE = 0; //最小年龄
@@ -139,6 +139,34 @@ public class userSampleFunction2 {
         return true;
     }
 
+    /**
+     * 判断是否是同一个用户
+     * @param srcUserIdNo 输入用户的身份证号
+     * @param srcUserMobile 输入用户的手机号
+     * @param srcUserName 输入用户的用户名
+     * @param srcUserSex 输入用户的性别
+     * @param srcUserAge 输入用户的年龄
+     * @param cmpUserIdNo 待对比用户的身份证号
+     * @param cmpUserMobile 待对比用户的手机号
+     * @param cmpUserName 待对比用户的用户名
+     * @param cmpUserSex 待对比用户的性别
+     * @param cmpUserAge 待对比用户的年龄
+     * @return 是同一个用户返回true，否则返回false
+     */
+    public static Boolean isSameUser(String srcUserIdNo, String srcUserMobile, String srcUserName, Integer srcUserSex,
+            Integer srcUserAge, String cmpUserIdNo, String cmpUserMobile, String cmpUserName, Integer cmpUserSex,
+            Integer cmpUserAge) {
+        if (srcUserIdNo.equals(cmpUserIdNo) || srcUserMobile.equals(cmpUserMobile)) {
+            if (!isDiffName(srcUserName, cmpUserName)
+                    && !isDiffSex(srcUserSex, cmpUserSex)
+                    && !isDiffAge(srcUserAge, cmpUserAge)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public static void main(String[] args) {
         String aUserName = "tom  ";
         Integer aUserSex = 1;
@@ -152,18 +180,10 @@ public class userSampleFunction2 {
         String bUserMobile = "13522113573";
         String bUserIdNo = "";
 
-        Boolean isSameUser = false;
+        Boolean cmpResult = isSameUser(aUserIdNo, aUserMobile, aUserName, aUserSex, aUserAge,
+                bUserIdNo, bUserMobile, bUserName, bUserSex, bUserAge);
 
-        //判断是否是同一个人
-        if (aUserIdNo.equals(bUserIdNo) || aUserMobile.equals(bUserMobile)) {
-            if (!isDiffName(aUserName, bUserName)
-                    && !isDiffSex(aUserSex, bUserSex)
-                    && !isDiffAge(aUserAge, bUserAge)) {
-                isSameUser = true;
-            }
-        }
 
-        System.out.println("A用户和B用户是同一个人:" + isSameUser);
+        System.out.println("A用户和B用户是同一个人:" + cmpResult);
     }
-
 }

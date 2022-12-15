@@ -1,4 +1,4 @@
-package com.share.codesample.service;
+package com.share.codesample.service.functionSample;
 
 public class userSampleFunction1 {
 

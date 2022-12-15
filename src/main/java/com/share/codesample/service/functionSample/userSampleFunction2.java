@@ -1,4 +1,4 @@
-package com.share.codesample.service;
+package com.share.codesample.service.functionSample;
 
 public class userSampleFunction2 {
     private static Integer MAX_NAME_LEN = 3; //姓名最大长度

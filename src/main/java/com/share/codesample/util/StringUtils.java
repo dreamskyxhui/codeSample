@@ -83,11 +83,4 @@ public class StringUtils {
         return true;
     }
 
-    public static void main(String[] args) {
-        Integer a = 3;
-        Integer b = 2;
-        Integer c = (int) Math.ceil(a * 1.0 / b);
-        System.out.println(c);
-    }
-
 }

@@ -1,4 +1,4 @@
-package com.share.codesample.service.classSample;
+package com.share.codesample.service.classSample1;
 
 public class BaseUserInfo {
     public String idNo;

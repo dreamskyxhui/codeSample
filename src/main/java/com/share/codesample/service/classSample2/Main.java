@@ -1,7 +1,6 @@
-package com.share.codesample.service.classSample;
+package com.share.codesample.service.classSample2;
 
-public class Main2 {
-
+public class Main {
 
     public static void main(String[] args) {
         String aUserName = "tom  ";

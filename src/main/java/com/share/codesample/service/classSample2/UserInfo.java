@@ -1,4 +1,6 @@
-package com.share.codesample.service.classSample;
+package com.share.codesample.service.classSample2;
+
+import com.share.codesample.service.classSample1.BaseUserInfo;
 
 public class UserInfo extends BaseUserInfo {
     private static Integer MAX_NAME_LEN = 3; //姓名最大长度

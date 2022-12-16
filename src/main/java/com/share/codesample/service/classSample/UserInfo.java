@@ -18,6 +18,23 @@ public class UserInfo extends BaseUserInfo {
         normalizeAge();
     }
 
+    /**
+     * 判断是否是同一个用户
+     * @param cmpUser 待对比用户
+     * @return 是同一个用户返回true，否则返回false
+     */
+    public Boolean isSameUser(UserInfo cmpUser) {
+        if (idNo.equals(cmpUser.idNo) || mobile.equals(cmpUser.mobile)) {
+            if (!isDiffName(cmpUser.name)
+                    && !isDiffSex(cmpUser.sex)
+                    && !isDiffAge(cmpUser.age)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private void normalizeName() {
         name = name.replace("~", "").trim().substring(0,MAX_NAME_LEN);
     }
@@ -85,22 +102,5 @@ public class UserInfo extends BaseUserInfo {
         }
 
         return true;
-    }
-
-    /**
-     * 判断是否是同一个用户
-     * @param cmpUser 待对比用户
-     * @return 是同一个用户返回true，否则返回false
-     */
-    public Boolean isSameUser(UserInfo cmpUser) {
-        if (idNo.equals(cmpUser.idNo) || mobile.equals(cmpUser.mobile)) {
-            if (!isDiffName(cmpUser.name)
-                    && !isDiffSex(cmpUser.sex)
-                    && !isDiffAge(cmpUser.age)) {
-                return true;
-            }
-        }
-
-        return false;
     }
 }

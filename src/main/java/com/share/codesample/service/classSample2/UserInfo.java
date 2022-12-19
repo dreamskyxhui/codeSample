@@ -26,6 +26,7 @@ public class UserInfo extends BaseUserInfo {
      * @return 是同一个用户返回true，否则返回false
      */
     public Boolean isSameUser(UserInfo cmpUser) {
+        //身份证或电话号码相同，且姓名、性别、年纪没有不一致时为相同用户
         if (idNo.equals(cmpUser.idNo) || mobile.equals(cmpUser.mobile)) {
             if (!isDiffName(cmpUser.name)
                     && !isDiffSex(cmpUser.sex)

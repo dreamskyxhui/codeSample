@@ -3,6 +3,7 @@ package com.share.codesample.service.classSample3;
 import com.share.codesample.service.classSample1.BaseUserInfo;
 
 public class UserInfo extends BaseUserInfo {
+
     private static Integer MAX_NAME_LEN = 3; //姓名最大长度
 
     private static Integer MIN_AGE = 0; //最小年龄
@@ -13,6 +14,10 @@ public class UserInfo extends BaseUserInfo {
     private static Integer FEMALE_SEX_CODE = 2; //女性
     private static Integer UNKNOWN_SEX_CODE = -1; //未知性别
 
+    public UserInfo() {
+
+    }
+
     public UserInfo(String inIdNo, String inMobile, String inName, Integer inSex, Integer inAge) {
         super(inIdNo, inMobile, inName, inSex, inAge);
         normalizeName();
@@ -21,7 +26,7 @@ public class UserInfo extends BaseUserInfo {
     }
 
     private void normalizeName() {
-        name = name.replace("~", "").trim().substring(0,MAX_NAME_LEN);
+        name = name.replace("~", "").trim().substring(0, MAX_NAME_LEN);
     }
 
     private void normalizeSex() {

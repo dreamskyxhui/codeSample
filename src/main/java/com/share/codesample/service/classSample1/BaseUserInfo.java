@@ -1,6 +1,10 @@
 package com.share.codesample.service.classSample1;
 
+import lombok.Data;
+
+@Data
 public class BaseUserInfo {
+
     public String idNo;
     public String mobile;
     public String name;

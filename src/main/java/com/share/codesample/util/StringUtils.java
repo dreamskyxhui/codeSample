@@ -83,4 +83,22 @@ public class StringUtils {
         return true;
     }
 
+    /**
+     * 判断字符串是否为null或空
+     *
+     * @param str
+     * @return
+     */
+    public static boolean isEmpty(String str) {
+        if (null == str) {
+            return true;
+        }
+
+        if (str.isEmpty()) {
+            return true;
+        }
+
+        return false;
+    }
+
 }

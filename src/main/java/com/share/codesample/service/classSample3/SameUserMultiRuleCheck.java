@@ -1,7 +1,7 @@
 package com.share.codesample.service.classSample3;
 
-public class SameUserMultiRuleCheck implements SameUserCheck{
-
+public class SameUserMultiRuleCheck implements SameUserCheck {
+    
     @Override
     public Boolean isSameUser(UserInfo srcUser, UserInfo cmpUser) {
         //身份证相同，且姓名相同才是同一个用户；否则不是同一个用户

@@ -1,6 +1,6 @@
 package com.share.codesample.service.classSample3;
 
-public class SameUserSimpleRuleCheck implements SameUserCheck{
+public class SameUserSimpleRuleCheck implements SameUserCheck {
 
     @Override
     public Boolean isSameUser(UserInfo srcUser, UserInfo cmpUser) {

@@ -16,7 +16,7 @@ public class UserSample {
         String bUserIdNo = "";
 
         Boolean isSameUser = false;
-        if(aUserIdNo.equals(bUserIdNo) || aUserMobile.equals(bUserMobile)) {
+        if (aUserIdNo.equals(bUserIdNo) || aUserMobile.equals(bUserMobile)) {
             isSameUser = true;
         }
 

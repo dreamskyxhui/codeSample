@@ -15,10 +15,10 @@ public class StringUtils {
 
         if (obj instanceof String) {
             String strVal = (String) obj;
-            if (strVal.trim().isEmpty() ||
-                    strVal.equals("null") ||
-                    strVal.equals("NULL") ||
-                    strVal.trim().equals("-")) {
+            if (strVal.trim().isEmpty()
+                    || strVal.equals("null")
+                    || strVal.equals("NULL")
+                    || strVal.trim().equals("-")) {
                 return false;
             }
         }

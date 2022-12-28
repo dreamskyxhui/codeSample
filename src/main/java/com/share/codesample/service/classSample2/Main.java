@@ -19,7 +19,6 @@ public class Main {
         UserInfo cmpUser = new UserInfo(bUserIdNo, bUserMobile, bUserName, bUserSex, bUserAge);
         Boolean cmpResult = srcUser.isSameUser(cmpUser);
 
-
         System.out.println("A用户和B用户是同一个人:" + cmpResult);
     }
 }

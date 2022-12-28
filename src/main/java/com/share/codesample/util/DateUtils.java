@@ -64,9 +64,10 @@ public class DateUtils {
 
     /**
      * 比较时间大小
+     *
      * @param date1
      * @param date2
-     * @return date1>date2 true; date1<date2 false;
+     * @return
      */
     public static boolean compareDate(Date date1, Date date2) {
         if (date1.getTime() > date2.getTime()) {
@@ -81,7 +82,7 @@ public class DateUtils {
      *
      * @param time
      * @param format
-     * @return
+     * @return 返回解析成功的日期
      * @throws ParseException
      */
     public static Date getDate(String time, String format) throws ParseException {
@@ -165,11 +166,12 @@ public class DateUtils {
 
     /**
      * 获取时间差
+     *
      * @param startTime 起始时间，格式为：yyyy-MM-dd HH:mm:ss
      * @param endTime 结束时间，格式为：yyyy-MM-dd HH:mm:ss
      * @return 时间差，单位为秒
      */
-    public static long getTimeDuration(String startTime, String endTime){
+    public static long getTimeDuration(String startTime, String endTime) {
         try {
             DateFormat df = new SimpleDateFormat(DATETIME_LONG);
             Calendar cal = Calendar.getInstance();
@@ -180,26 +182,28 @@ public class DateUtils {
             long durationSecond = (endMs - startMs) / 1000;
 
             return durationSecond;
-        }catch (ParseException e) {
+        } catch (ParseException e) {
             return -1;
         }
     }
 
     /**
      * 将秒数转换为 时：分：秒形式的字符串，例如："05:33:52"
+     *
      * @param timeSecond 秒数
      * @return 转换后的字符串
      */
-    public static String getSecondShowString(long timeSecond){
-        long hour = timeSecond/3600;
-        long minute = (timeSecond - hour*3600)/60;
-        long second = timeSecond - hour*3600 - minute*60;
+    public static String getSecondShowString(long timeSecond) {
+        long hour = timeSecond / 3600;
+        long minute = (timeSecond - hour * 3600) / 60;
+        long second = timeSecond - hour * 3600 - minute * 60;
 
         return String.format("%02d", hour) + ":" + String.format("%02d", minute) + ":" + String.format("%02d", second);
     }
 
     /**
      * 将日期补齐，统一转换为yyyy-MM-dd HH:mm:ss
+     *
      * @param strDate yyyy-MM 或 yyyy-MM-DD 或者 yyy-MM-DD HH:mm:ss
      * @return 日期格式:yyyy-MM-dd HH:mm:ss
      */
@@ -226,7 +230,7 @@ public class DateUtils {
             SimpleDateFormat dateFormat = new SimpleDateFormat(formatStr);
             Date date = dateFormat.parse(strDate);
             return (new SimpleDateFormat(DATETIME_LONG)).format(date);
-        }catch (ParseException e) {
+        } catch (ParseException e) {
             return "";
         }
     }
